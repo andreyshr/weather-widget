@@ -2,7 +2,7 @@
 
 Виджет для отображения погоды.
 
-Демо - https://615f2e5a4150f35956f960c5--serene-ardinghelli-69428f.netlify.app/
+Демо - https://serene-ardinghelli-69428f.netlify.app/
 
 Чтобы использовать виджет на вашем сайте, добавьте следующий код:
 ```
