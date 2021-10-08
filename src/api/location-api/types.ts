@@ -1,4 +1,4 @@
-import {Nullable} from "@/types/utility-types";
+import { Nullable } from "@/types/utility-types";
 
 export type TLocationResponse = {
   data: {
@@ -16,7 +16,7 @@ export type TLocationResponse = {
     org: string;
     as: string;
     query: string;
-  }
+  };
 };
 
 export type TCoordinates = {
@@ -29,4 +29,4 @@ export type TLocation = {
   city: Nullable<string>;
   country: Nullable<string>;
   coordinates: TCoordinates;
-}
+};

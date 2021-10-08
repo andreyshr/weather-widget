@@ -1,15 +1,16 @@
 <template>
   <div class="weather-forecast">
     <h3 class="weather-forecast__title">
-      {{ weatherForecast.location.city }}, {{ weatherForecast.location.country }}
+      {{ weatherForecast.location.city }},
+      {{ weatherForecast.location.country }}
     </h3>
 
     <div class="weather-forecast__main">
       <img
-          :src="`${imgPath}${weatherForecast.icon}@2x.png`"
-          :alt="weatherForecast.main"
-          width="100"
-          height="100"
+        :src="`${imgPath}${weatherForecast.icon}@2x.png`"
+        :alt="weatherForecast.main"
+        width="100"
+        height="100"
       />
       <div class="weather-forecast__temperature">
         {{ weatherForecast.temperature }}&#176;C
@@ -20,8 +21,7 @@
       <p>
         <span>Feels like: </span>
         <span
-        >{{ weatherForecast.feels_like }}&#176;C
-          {{ weatherForecast.main }}.
+          >{{ weatherForecast.feels_like }}&#176;C {{ weatherForecast.main }}.
           {{ weatherForecast.description }}</span
         >
       </p>
@@ -38,13 +38,13 @@
 </template>
 
 <script lang="ts">
-import {Component, Prop, Vue} from "vue-property-decorator";
-import {TWeatherForecast} from "@/api/weather-api/types";
+import { Component, Prop, Vue } from "vue-property-decorator";
+import { TWeatherForecast } from "@/api/weather-api/types";
 
 @Component
 export default class WeatherForecast extends Vue {
   private readonly imgPath = "https://openweathermap.org/img/wn/";
-  @Prop({required: true}) readonly weatherForecast!: TWeatherForecast;
+  @Prop({ required: true }) readonly weatherForecast!: TWeatherForecast;
 }
 </script>
 

@@ -1,8 +1,10 @@
-import axios from 'axios';
-import { TLocationResponse } from './types';
+import axios from "axios";
+import { TLocationResponse } from "./types";
 
 export class LocationApi {
-    public static getLocationByIp(): Promise<TLocationResponse> {
-        return axios.get(`http://ip-api.com/json/`);
-    }
+  static readonly BASE_URL = "http://ip-api.com/json/";
+
+  public static getLocationByIp(): Promise<TLocationResponse> {
+    return axios.get(`${LocationApi.BASE_URL}`);
+  }
 }
